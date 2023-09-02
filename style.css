@@ -1934,17 +1934,6 @@ footer .lower_info a {
         z-index: 5;
     }
 
-    
-    /* .header__authorization.menu {
-        display: block;
-        width: 32px;
-        height: 32px;
-        position: absolute;
-        top: 0px;
-        right: 92px;
-        padding: 0;
-    } */
-
     .header_nav-close {
             width: 32px;
             height: 32px;
@@ -2075,13 +2064,13 @@ h1.intro__title {
 /* section favorites adaptive */
 
 .favorites {
-/* max-width: 728px; */
 height: auto;
 width: auto;
-/* padding: 0 20px; */
 margin: 0 20;
 }
-
+h4.book_header_minor {
+ height: auto;
+}
 .books {
     margin: 40px 69px 0px 69px;
     justify-content: center;
@@ -2102,8 +2091,6 @@ img.book_image {
 .book_description {
     margin-bottom: 60px;
     width: auto;
-    /* max-width: 355px; */
-    /* position: static; */
 }
 
 .season_list {
