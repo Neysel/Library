@@ -2278,7 +2278,7 @@ padding-bottom: 268px;
     margin: 0;
 }
 
-.wrapper {
+.favorites .wrapper {
     margin: 0 20px;
 }
 
@@ -2300,36 +2300,23 @@ padding-bottom: 268px;
     form div.brown_color {
         height: auto;
     }
+
+.menu_list ul {
+    font-size: 15px;
 }
-
-
-/* @media screen and (max-width: 600px) {
-
-.books {
-    margin-left: 0;
-    }
-
-img.book_image {
-        right: 0;
-        top: 0;
-        max-width: 100px;
-        max-height: 150px;
-        transition: 0.5s;
-    }
-
-.book_description {
-    width: auto;
+.coffee_and_tea li span.line {
+    width: 50px
 }
-
-h4.book_header_minor {
-    width: 50%;
+.menu_list li {
+    margin-top: 5px
+}
+.desserts_and_cakes li.menu_item {
+    gap: 0;
     height: auto;
 }
-}  */
-    /* -webkit-transition: all 0.5s ease;;
-    -moz-transition: all 0.5s ease;;
-    -o-transition: all 0.5s ease;;
-    transition: all 0.5s ease;
-    cursor: pointer */
-
-    /* <a href="https://www.google.com/maps/search/286+Cadman+Plaza,+New+York,+NY+11238,+United+States/@40.6956337,-73.9928847,17z/data=!3m1!4b1?entry=ttu">286 Cadman Plaza, New York, NY 11238, United States</a> */
+.desserts_and_cakes li span.line {
+    width: 50px;
+}
+main .coffee_shop {
+    margin: 0 5px;
+}
