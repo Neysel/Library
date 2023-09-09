@@ -626,19 +626,21 @@ h2.bottom_line::after {
 .gallery {
     margin: 0 20px;
     width: auto;
+    
     /* max-width: 1440px; */
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
  .slider {
     /* display: block; */
     /* margin: 0 20px; */
-    width: 9999px;
+    width: 2000px;
+    max-width:2000px;
     height: 560px;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     /* flex-wrap: wrap */
-    transition: 1s;
+    transition: 1s ease-out;
     /* margin-left: 0px; */
  }
 
@@ -1934,6 +1936,17 @@ footer .lower_info a {
         z-index: 5;
     }
 
+    
+    /* .header__authorization.menu {
+        display: block;
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        top: 0px;
+        right: 92px;
+        padding: 0;
+    } */
+
     .header_nav-close {
             width: 32px;
             height: 32px;
@@ -2064,13 +2077,13 @@ h1.intro__title {
 /* section favorites adaptive */
 
 .favorites {
+/* max-width: 728px; */
 height: auto;
 width: auto;
+/* padding: 0 20px; */
 margin: 0 20;
 }
-h4.book_header_minor {
- height: auto;
-}
+
 .books {
     margin: 40px 69px 0px 69px;
     justify-content: center;
@@ -2091,6 +2104,8 @@ img.book_image {
 .book_description {
     margin-bottom: 60px;
     width: auto;
+    /* max-width: 355px; */
+    /* position: static; */
 }
 
 .season_list {
@@ -2307,3 +2322,35 @@ padding-bottom: 268px;
 main .coffee_shop {
     margin: 0 5px;
 }
+
+}
+/* @media screen and (max-width: 600px) {
+
+.books {
+    margin-left: 0;
+    }
+
+img.book_image {
+        right: 0;
+        top: 0;
+        max-width: 100px;
+        max-height: 150px;
+        transition: 0.5s;
+    }
+
+.book_description {
+    width: auto;
+}
+
+h4.book_header_minor {
+    width: 50%;
+    height: auto;
+}
+}  */
+    /* -webkit-transition: all 0.5s ease;;
+    -moz-transition: all 0.5s ease;;
+    -o-transition: all 0.5s ease;;
+    transition: all 0.5s ease;
+    cursor: pointer */
+
+    /* <a href="https://www.google.com/maps/search/286+Cadman+Plaza,+New+York,+NY+11238,+United+States/@40.6956337,-73.9928847,17z/data=!3m1!4b1?entry=ttu">286 Cadman Plaza, New York, NY 11238, United States</a> */
