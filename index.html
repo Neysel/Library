@@ -174,7 +174,6 @@
         <div class="wrapper">
 
             <div class="header__wrapper">
-                <!-- header__wrapper - для выравнивания внутри хедера -->
 
                 <div class="header__main_text">Brooklyn Public Library</div>
 
@@ -250,12 +249,19 @@
             <h2 class="about_intro bottom_line" id="about">About</h2>
 
             <div class="about_text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside</div>
+
+            <input type="radio" name="r" id="r1" checked>
+            <input type="radio" name="r" id="r2">
+            <input type="radio" name="r" id="r3">
+            <input type="radio" name="r" id="r4">
+            <input type="radio" name="r" id="r5">
             
             <div class="slider_wrapper carousel" id="carousel">
+
                 <div class="gallery" id="gallery">
-                <div class="slider" id="slider" style="margin-left: 0px;">
+                <div class="slider" id="slider">
                     <div>
-                    <img class="slider_item" src="./library_items/1st_img.jpg" alt="girl_in_library">
+                    <img class="slider_item s1" src="./library_items/1st_img.jpg" alt="girl_in_library">
                     </div>
                     <div>
                     <img class="slider_item" src="./library_items/2nd_img.jpg" alt="statue busts">
@@ -288,21 +294,21 @@
             </div>
 
             <div class="slider_buttons">
-                <div class="slider_button_item button_1 slider_button_item_checked">
-                    <div class="elem slider_checked"></div>
-                </div>
-                <div class="slider_button_item button_2">
-                    <div class="elem"></div>
-                </div>
-                <div class="slider_button_item button_3">
-                    <div class="elem"></div>
-                </div>
-                <div class="slider_button_item button_4">
-                    <div class="elem"></div>
-                </div>
-                <div class="slider_button_item button_5">
-                    <div class="elem"></div>
-                </div>
+                <label for="r1" class="slider_button_item button_1">
+                    <span class="elem"></span>
+                </label>
+                <label for="r2" class="slider_button_item button_2">
+                    <span class="elem"></span>
+                </label>
+                <label for="r3" class="slider_button_item button_3">
+                    <span class="elem"></span>
+                </label>
+                <label for="r4" class="slider_button_item button_4">
+                    <span class="elem"></span>
+                </label>
+                <label for="r5" class="slider_button_item button_5">
+                    <span class="elem"></span>
+                </label>
 
             </div>
         </section>

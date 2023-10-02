@@ -254,7 +254,6 @@ Reload_current_session_acc(key)
 Visits(key)
 checkBooksEnter(key)
 enter_account_change_elems()
-
 }
 
 function enter_account_change_elems() {
@@ -408,110 +407,53 @@ navigator.clipboard.writeText(current_account.CardNumber).then(
 
 // SLIDER ABOUT
 
-// Это нужно для прогрузки картинок в браузер, ведь с overflow:hidden браузер не идит картинки и начинает тупить на первые прокрутки
-window.addEventListener("load", (event) => {
-console.log("page is fully loaded");
-gallery.style = 'overflow: hidden'
-}); 
-
 let slider_about = document.querySelectorAll('.slider_button_item');
 let buttons = document.querySelectorAll('.slider_button_item');
 let buttons_color = document.querySelectorAll('.slider_button_item .elem')
 
+// let count  = 0
+let currentSlideId 
 
-
-
-let count  = 0
-
-for(let i = 1; i <= slider_about.length; i++ ) {
-document.querySelector(`.button_${i}`).onclick = () => {
-  // remove checked from all
-  buttons.forEach((elem) => elem.classList.remove('slider_button_item_checked'))
-  buttons_color.forEach((elem) => elem.classList.remove('slider_checked'))
-
-    document.querySelector(`.button_${i} .elem`).classList.add('slider_checked')
-    document.querySelector(`.button_${i} `).classList.add('slider_button_item_checked')
-
-
-  switch (i) {
-    case 1: 
-    count = 0
-    slider.style.marginLeft = 0
-    break;
-    case 2: 
-    count = -475
-    slider.style.marginLeft = count+'px'
-    break;
-    case 3: 
-    count = -(475*2)
-    slider.style.marginLeft = count+'px'
-    break;
-    case 4: 
-    count = -(475*3)
-    slider.style.marginLeft = count+'px'
-    break;
-    case 5: 
-    count = -(475*4)
-    slider.style.marginLeft = count+'px'
-    break;
-
-    
-
-  }
-
-
-}
+function checkCount() {
 
 }
 
 function check_buttons() {
-if (count === 0) {
-  document.querySelector(`.button_1 .elem`).classList.add('slider_checked')
-  document.querySelector(`.button_1 `).classList.add('slider_button_item_checked')
-} else if (count === -475) {
-  document.querySelector(`.button_2 .elem`).classList.add('slider_checked')
-  document.querySelector(`.button_2 `).classList.add('slider_button_item_checked')
-} else if (count === -(475*2)) {
-  document.querySelector(`.button_3 .elem`).classList.add('slider_checked')
-  document.querySelector(`.button_3 `).classList.add('slider_button_item_checked')
-} else if (count === -(475*3)) {
-  document.querySelector(`.button_4 .elem`).classList.add('slider_checked')
-  document.querySelector(`.button_4 `).classList.add('slider_button_item_checked')
-} else if (count === -(475*4)) {
-  document.querySelector(`.button_5 .elem`).classList.add('slider_checked')
-  document.querySelector(`.button_5 `).classList.add('slider_button_item_checked')
-}
+
+  for (let i = 1; i <=5; i++) {
+    let p = document.querySelector(`#r${i}`)
+    if (p.checked === true) {
+      currentSlideId = i
+    }
+  }
+// if (count === 0 && r1.checked === true) {
+//   r1.checked = true;
+// } else if (count === -475) {
+//   r2.checked = true;
+// } else if (count === -(475*2)) {
+//   r3.checked = true;
+// } else if (count === -(475*3)) {
+//   r4.checked = true;
+// } else if (count === -(475*4)) {
+//   r5.checked = true;
+// }
 
 }
-
-
-
 
 document.querySelector('.slider_button_about_left').onclick = () => {
-// alert(count)
-
-if (count >= -1900 && count < 0) {
-count += 475
-slider.style.marginLeft = count+'px'
-buttons.forEach((elem) => elem.classList.remove('slider_button_item_checked'))
-buttons_color.forEach((elem) => elem.classList.remove('slider_checked'))
-check_buttons()
+  check_buttons()
+  if (currentSlideId > 1) {
+    let p = document.querySelector(`#r${currentSlideId-1}`)
+    p.checked = true
+  } 
 }
 
-
-}
 document.querySelector('.slider_button_about_right').onclick = () => {
-if ( count <= 0 && count > -1900) {
-
-count -= 475;
-slider.style.marginLeft = count +'px';
-// slider.style.transition = '1s ease-in-out'
-buttons.forEach((elem) => elem.classList.remove('slider_button_item_checked'));
-buttons_color.forEach((elem) => elem.classList.remove('slider_checked'));
 check_buttons()
-
-}
-
+if (currentSlideId < 5) {
+  let p = document.querySelector(`#r${currentSlideId+1}`)
+  p.checked = true
+} 
 
 }
 

@@ -414,19 +414,13 @@ display: inline-flex;
     height: auto;
     background-color: #fff;
     flex-wrap: wrap;
-
     font-family: Inter;
-font-size: 20px;
-font-weight: 400;
-line-height: 20px;
-letter-spacing: 0px;
-text-align: center;
-/* hyphens: auto; */
-/* padding-top: 5px; */
-word-wrap: break-word;
-/* display: flex; */
-/* align-items: center; */
-    /* justify-content: center; */
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+    word-wrap: break-word;
 }
 
 .modal_profile_right {
@@ -452,21 +446,15 @@ margin: 40px 0 0 20px;
 
 .Rented_books {
     margin: 20px 0 0 20px;
-    color: #0C0C0E;
-/* text-align: center; */
-font-family: Inter;
-font-size: 25px;
-font-style: normal;
-font-weight: 400;
-line-height: 20px; /* 80% */
+    color: #0C0C0E; 
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 80% */
 
 }
 
-
-/* .wrapper_rented  {
-    margin: 30px 0 0 20px;
-
-} */
 
 .Rented_books ul {
     margin: 30px 0 0 15px;
@@ -474,12 +462,9 @@ line-height: 20px; /* 80% */
     width: 350px;
     height: 70px;
     overflow: auto;
-/* list-style-type:disc */
-    /* margin-left: 0;   */
 }
 
 .Rented_books li {
-
     color: #000;
 font-family: Inter;
 font-size: 20px;
@@ -626,23 +611,17 @@ h2.bottom_line::after {
 .gallery {
     margin: 0 20px;
     width: auto;
-    
-    /* max-width: 1440px; */
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
  .slider {
-    /* display: block; */
-    /* margin: 0 20px; */
     width: 2000px;
     max-width:2000px;
     height: 560px;
     display: flex;
-    /* justify-content: space-between; */
-    /* flex-wrap: wrap */
-    transition: 1s ease-out;
-    /* margin-left: 0px; */
+    transition: 0.5s all;
  }
+
 
 .slider_item {
     width: 450px;
@@ -650,11 +629,12 @@ h2.bottom_line::after {
     height: 560px;
     object-fit: cover;
     background: lightgray 50% ;
-   
+     transition: 0.5s all;
  }
  .slider div {
     margin-right: 25px;
     max-width: 450px;
+    transition: 0.5s all;
  }
 
 .slider div:last-child  {
@@ -696,18 +676,12 @@ h2.bottom_line::after {
     cursor:auto; 
    
 } 
-
-.slider_button_item div.elem {
+.slider_buttons label span.elem {
+    display: block;
     width: 16px;
     height: 16px; 
     background: #0C0C0E;
     border-radius: 50%;
-}
-
-div.elem.slider_checked {
-    background: #BB945F;
-    border-radius: 50%;
-    cursor:auto;
 }
 
 .button_4 {
@@ -716,6 +690,67 @@ div.elem.slider_checked {
 .button_5 {
     display: none;
 }
+
+
+/* slider movement */
+
+
+input[name='r'] {
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+    position: absolute;
+}
+/* .slider_button_item .button_1 { */
+    
+/* } */
+#r1:checked~.slider_buttons .button_1 .elem {
+    background: #BB945F;
+    border-radius: 50%;
+    cursor:auto;
+}
+#r1:checked~.slider_wrapper .slider {
+    margin-left: 0
+}
+
+
+#r2:checked~.slider_buttons .button_2 .elem {
+    background: #BB945F;
+    border-radius: 50%;
+    cursor:auto;
+}
+#r2:checked~.slider_wrapper .slider {
+    margin-left: -475px
+}
+
+#r3:checked~.slider_buttons .button_3 .elem {
+    background: #BB945F;
+    border-radius: 50%;
+    cursor:auto;
+}
+#r3:checked~.slider_wrapper .slider {
+    margin-left: calc(-1*(475px*2))
+}
+
+#r4:checked~.slider_buttons .button_4 .elem {
+    background: #BB945F;
+    border-radius: 50%;
+    cursor:auto;
+}
+#r4:checked~.slider_wrapper .slider{
+    margin-left: calc(-1*(475px*3))
+}
+
+#r5:checked~.slider_buttons .button_5 .elem {
+    background: #BB945F;
+    border-radius: 50%;
+    cursor:auto;
+}
+#r5:checked~.slider_wrapper .slider {
+    margin-left: calc(-1*(475px*4))
+}
+
+
 
 
 /* SECTION FAVOURITES */
@@ -1997,25 +2032,13 @@ h1.intro__title {
 
 .slider_item {
     width: 450px;
+    transition: 0.5s all;
 }
 
 
 .gallery {
     width: 450px;
     margin: 0 auto;
-}
-
-/* .slider div:nth-child(2) {
-    display: none;
-}
-.slider div:last-child{
-    display: none;
-} */
-
-.slider_wrapper {
-    position: relative;
-    width: 100%;
-    height: auto;
 }
 
 .slider_buttons {
